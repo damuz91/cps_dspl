@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - bundle install --deployment
+
+  build:
+    commands:
+      # Run the tests using RSpec.
+      - cucumber
+
+artifacts:
+  type: zip
+  files:
+    - template-export.yaml
