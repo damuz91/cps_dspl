@@ -9,8 +9,11 @@ phases:
     commands:
       # Run the tests using RSpec.
       - bundle exec cucumber
+  post-build:
+    commands:
+      - tar -czf project.zip .
 
 artifacts:
   type: zip
   files:
-    - template-export.yaml
+    - project.zip
