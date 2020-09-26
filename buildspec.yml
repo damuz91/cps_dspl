@@ -9,7 +9,7 @@ phases:
     commands:
       # Run the tests using RSpec.
       - bundle exec cucumber
-  post-build:
+  post_build:
     commands:
       - tar -czf project.zip .
 
